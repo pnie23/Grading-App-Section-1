@@ -1,10 +1,14 @@
+using Grading_App_Section_1.Models;
+using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
-
-
+builder.Services.AddDbContext<GradingAppContext>(options =>
+{
+    options.UseSqlite(builder.Configuration["ConnectionStrings:GradingConnection"]);
+});
+builder.Services.AddScoped<IGradingAppRepository, EFGradingAppRepository>();
 
 builder.Services.AddHeroicons(builder.Configuration);
 
