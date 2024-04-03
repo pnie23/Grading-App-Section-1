@@ -1,26 +1,8 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-
-@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-
-@model IQueryable<TA>
-
-<body>
+﻿<body>
     <br />
     <br />
     <h1 class="HelloAndrewIs414Ta" style="font-weight: bold">Hello, {TA Name}! IS {Class Name} TA</h1>
     <br />
-    @foreach (var x in Model)
-    {
-        <p>@x.first_name</p>
-    }
     <p>Submissions Graded</p>
     <br />
     <div id="myProgress">
@@ -34,7 +16,7 @@
                 i = 1;
                 var j = 0;
                 //replace the testArray with the validation of entries in the database; or maybe comparing to the entries completed from Lindsey and Elise's chart
-                var testArray = [1, 2, 3, 4, 5, 6, 7];
+                var testArray = [1, 2, 3, 4, 5, 6, 7, 8];
                 var elem = document.getElementById("myBar");
                 var width = 0;
                 var id = setInterval(frame, 1);

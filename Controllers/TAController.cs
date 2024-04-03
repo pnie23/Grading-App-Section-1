@@ -18,13 +18,7 @@ namespace Grading_App_Section_1.Controllers
 
         public IActionResult Dashboard()
         {
-            var names = _repo.TAs
-                .ToList();
-
-            ViewBag.TAs = _repo.TAs
-                .ToList();
-
-            return View(names);
+            return View();
         }
 
         public IActionResult Index()
