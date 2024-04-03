@@ -5,6 +5,12 @@ namespace Grading_App_Section_1.Controllers
 {
     public class TAController : Controller
     {
+        private IGradingAppRepository _repo;
+
+        public TAController(IGradingAppRepository temp)
+        {
+            _repo = temp;
+        }
         public IActionResult Rubric()
         {
             return View();
@@ -13,7 +19,7 @@ namespace Grading_App_Section_1.Controllers
         public IActionResult Dashboard()
         {
             var names = _repo.TAs
-                .OrderBy(x => x.first_name).ToList();
+                .ToList();
 
             ViewBag.TAs = _repo.TAs
                 .ToList();
@@ -21,12 +27,6 @@ namespace Grading_App_Section_1.Controllers
             return View(names);
         }
 
-        private IGradingAppRepository _repo;
-
-        public TAController(IGradingAppRepository temp)
-        {
-            _repo = temp;
-        }
         public IActionResult Index()
         {
             return View();
