@@ -12,7 +12,13 @@ namespace Grading_App_Section_1.Controllers
 
         public IActionResult Dashboard()
         {
-            return View();
+            var names = _repo.TAs
+                .OrderBy(x => x.first_name).ToList();
+
+            ViewBag.TAs = _repo.TAs
+                .ToList();
+
+            return View(names);
         }
 
         private IGradingAppRepository _repo;

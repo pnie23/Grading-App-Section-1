@@ -10,7 +10,7 @@ namespace Grading_App_Section_1.Models
         public GradingAppContext(DbContextOptions<GradingAppContext> options) : base(options)
         { }
 
-        public DbSet<Admins_Teacher> Admins_Teachers { get; set; }
+        public DbSet<Admin_Teacher> Admins_Teachers { get; set; }
         public DbSet<Judge> Judges { get; set; }
         public DbSet<Judge_Team> Judge_Teams { get; set; }
         public DbSet<Rubric_Item> Rubric_Items { get; set; }

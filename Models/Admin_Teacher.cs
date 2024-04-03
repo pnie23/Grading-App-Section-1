@@ -2,7 +2,7 @@
 
 namespace Grading_App_Section_1.Models
 {
-    public class Admins_Teacher
+    public class Admin_Teacher
     {
         [Key]
         public string prof_netid { get; set; }

@@ -10,13 +10,17 @@
 @{
 }
 
-
+@model IQueryable<TA>
 
 <body>
     <br />
     <br />
     <h1 class="HelloAndrewIs414Ta" style="font-weight: bold">Hello, {TA Name}! IS {Class Name} TA</h1>
     <br />
+    @foreach (var x in Model)
+    {
+        <p>@x.first_name</p>
+    }
     <p>Submissions Graded</p>
     <br />
     <div id="myProgress">

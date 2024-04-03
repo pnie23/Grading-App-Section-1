@@ -11,7 +11,7 @@ namespace Grading_App_Section_1.Models
             _context = temp;
         }
         //These are lists for each table that has been created for ViewBag and other displaying purposes. Use them if needed. 
-        public List<Admins_Teacher> Admins_Teachers => _context.Admins_Teachers.ToList();
+        public List<Admin_Teacher> Admin_Teachers => _context.Admins_Teachers.ToList();
         public List<Judge> Judges => _context.Judges.ToList();
         public List<Judge_Team> Judge_Teams => _context.Judge_Teams.ToList();
         public List<Rubric_Item> Rubric_Items => _context.Rubric_Items.ToList();
@@ -20,7 +20,7 @@ namespace Grading_App_Section_1.Models
         public List<Student> Students => _context.Students.ToList();
         public List<Student_Group> Student_Groups => _context.Student_Groups.ToList();
         public List<Survey_Response> Survey_Responses => _context.Survey_Responses.ToList();
-        public List<TA> TAs => _context.TAs.ToList();
+        public IQueryable<TA> TAs => _context.TAs;
         public List<Login_Table> Login_Tables => _context.Login_Tables.ToList();
 
         //README BEFORE EDITING
