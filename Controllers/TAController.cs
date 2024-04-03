@@ -9,6 +9,12 @@ namespace Grading_App_Section_1.Controllers
         {
             return View();
         }
+
+        public IActionResult Dashboard()
+        {
+            return View();
+        }
+
         private IGradingAppRepository _repo;
 
         public TAController(IGradingAppRepository temp)
