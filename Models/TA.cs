@@ -10,7 +10,7 @@ namespace Grading_App_Section_1.Models
 
         [ForeignKey("class_number")]
         public int class_number { get; set; }
-        public Admin_Teacher Admins_Teacher { get; set; }
+        public Admin_Teacher Admin_Teachers { get; set; }
 
         [Required]
         public string first_name { get; set; }
